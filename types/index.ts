@@ -7,25 +7,23 @@ export interface ServicePackage {
   popular?: boolean;
 }
 
-export interface PaymentData {
-  transactionReference: string;
-  customerMsisdn: string;
-  amount: string;
-  thirdPartyReference: string;
-  serviceProviderCode: string;
+export interface MpesaApiResponse {
+  output_ConversationID: string;
+  output_TransactionID: string;
+  output_ResponseCode: string;
+  output_ResponseDesc: string;
 }
 
 export interface PaymentResponse {
-  success: boolean;
-  data?: {
-    output_ConversationID: string;
-    output_TransactionID: string;
-    output_ResponseCode: string;
-    output_ResponseDesc: string;
-  };
-  error?: string;
-  conversationId?: string;
-  transactionId?: string;
-  responseCode?: string;
-  responseDesc?: string;
+  status: "success" | "error";
+  responseData?: MpesaApiResponse;
+  message: string;
+}
+
+export interface PaymentData {
+  input_TransactionReference: string;
+  input_CustomerMSISDN: string;
+  input_Amount: string;
+  input_ThirdPartyReference: string;
+  input_ServiceProviderCode: string;
 }

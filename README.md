@@ -1,6 +1,28 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+## Overview
+
+This project integrates the M-Pesa API with a frontend application built using Next.js. It allows users to make payments through M-Pesa directly from the web application.
+
 ## Getting Started
+
+Clone the Repository and install dependencies using:
+
+```bash
+npm install
+#or
+yarn install
+
+```
+
+Create a .env file in the root directory and add your environment variables:
+
+```bash
+MPESA_BEARER_TOKEN=""
+MPESA_API_HOST=api.sandbox.vm.co.mz
+MPESA_SERVICE_PROVIDER_CODE=171717
+MPESA_ORIGIN=developer.mpesa.vm.co.mz
+```
 
 First, run the development server:
 
