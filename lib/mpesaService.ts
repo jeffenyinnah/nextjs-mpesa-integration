@@ -1,8 +1,7 @@
 import axios from "axios";
 
 const MPESA_API_HOST = "api.sandbox.vm.co.mz"; // Use api.vm.co.mz for production
-const MPESA_BEARER_TOKEN =
-  "TORHMJIkXBxMYrwrbKSCTCYE0Fh1MPSNwOYwHlQnLmBBcIWbpkHXDFy8VJKvzHKQGpMnln0bulzwjz4X1p46zNBdcdv2R0zjhb+Qv5FFPGT+YnzwI5+tps7v/2vGftv/Qu3j8x9kg3wdKXcJHhRm/qni0n6OvfzT7vc1aIPA3MPWMFQCSWwHkRfTM97I7q3opMKW7PxHyh5PSaDjIXt+T2EpY+5I0AfcxDpTlqsYQHA0+nmxMLUubyWvkxoF1SxW/3Zw4KbQDOw86iB6iyZf5Mwir2hKxKFPAg0ngFb66UhG/JfQzzt5NODz+vrwJFsY55Fcg0XdbXBxP1yVCT6xXGcG3Txab7oFQyPcp6eRDGocY8e8o49b4KMj8rnkMFazs/emRakFx/2N0jGb+YhwFlIWMBhRE2vAkyoQ5dPbYSODRB7PGtsh96a+trAs86vah3xUB8IMRTOKgHKpcGnIXHug4J6QtQ3RKuDwXQ+me4ZP0XVzjA4jMzAt3YLhsPlNTZ/5s5qdQwDL+pizL8ZzNJUe1PDexB9X53YbZ7S0u/6/j3WVF653s8T6kpm8ypst93u4gdEMECWMtKvX7B4IzDJTGJScskrfSZqYSCNo3aj4WrK1tHfUXY8N98nFk5FYvhu2ye7/7TzfD/97+Ae34tfP2PSQo7lazoSUSzUo6ms=";
+const MPESA_BEARER_TOKEN = process.env.MPESA_BEARER_TOKEN || "";
 const MPESA_SERVICE_PROVIDER_CODE = "171717";
 
 export interface MpesaResponse {
